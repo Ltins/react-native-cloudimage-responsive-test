@@ -4,8 +4,6 @@ import {
   installCloudImage,
 } from 'react-native-cloudimage-responsive';
 
-import "./index.css";
-
 const LOADING_BACKGROUND_SRC = 'https://c.tenor.com/WX_LDjYUrMsAAAAC/tenor.gif';
 
 installCloudImage({
@@ -18,7 +16,7 @@ installCloudImage({
 export default function App() {
   return (
     <View style={styles.view}>
-      <div style={styles.container}>
+      <View style={styles.container}>
         <CloudImage
           src="hotel.jpg"
           placeholderBackground={LOADING_BACKGROUND_SRC}
@@ -43,13 +41,13 @@ export default function App() {
             backgroundColor: 'cccc30',
           }}
         />
-      </div>
+      </View>
 
-      <div style={styles.divider} />
+      <View style={styles.divider} />
 
-      <div style={styles.container}>
+      <View style={styles.container}>
         <CloudImage src="castle.jpg" operations={'flip=v&func=cover'} />
-      </div>
+      </View>
     </View>
   );
 }
